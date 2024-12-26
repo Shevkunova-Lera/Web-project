@@ -6,14 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Корзина покупок</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
 
 <body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="logo" class="logo__link">
+                </a>
+                <div class="header__menu">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="shop.html" class="menu__list-link">Shop</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__list-link">Blog</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__list-link">Our story</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__list-link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="menu__icons">
+                        <a href="" class="icon">
+                            <img src="images/icon-1.svg" alt="" class="icon__link">
+                        </a>
+                        <a href="" class="icon">
+                            <img src="images/icon-2.svg" alt="" class="icon__link">
+                        </a>
+                        <a href="" class="icon">
+                            <img src="images/icon-3.svg" alt="" class="icon__link">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__line"></div>
+    </header>
+
     <section class="cart">
         <h1 class="cart__title">Shopping Cart</h1>
         <div class="cart__items">
             <div class="cart__item">
-                <img src="lira-earrings.jpg" alt="Lira Earrings" class="cart__item-image">
+                <img src="images/lira-earrings.jpg" alt="Lira Earrings" class="cart__item-image">
                 <div class="cart__item-details">
                     <h2 class="cart__item-title">Lira Earrings</h2>
                     <p class="cart__item-info">Black / Medium</p>
@@ -40,98 +81,33 @@
         </div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const cartContainer = document.querySelector('.cart__items');
-            const subtotalElem = document.querySelector('.cart__summary-subtotal span');
-            const totalElem = document.querySelector('.cart__summary-total span');
-            const shippingCost = 5.00;
-
-            function loadCart() {
-                const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
-                savedCart.forEach(item => {
-                    addItemToCart(item.title, item.info, item.price, item.image, item.quantity);
-                });
-                updateSummary();
-            }
-
-            function saveCart() {
-                const cartItems = Array.from(document.querySelectorAll('.cart__item')).map(item => {
-                    return {
-                        title: item.querySelector('.cart__item-title').textContent,
-                        info: item.querySelector('.cart__item-info').textContent,
-                        price: item.querySelector('.cart__item-price').textContent,
-                        image: item.querySelector('.cart__item-image').src,
-                        quantity: parseInt(item.querySelector('.cart__item-count').textContent)
-                    };
-                });
-                localStorage.setItem('cart', JSON.stringify(cartItems));
-            }
-
-            function updateSummary() {
-                let subtotal = 0;
-                document.querySelectorAll('.cart__item').forEach(item => {
-                    const price = parseFloat(item.querySelector('.cart__item-price').textContent.replace('$', '').replace(',', '.'));
-                    const quantity = parseInt(item.querySelector('.cart__item-count').textContent);
-                    subtotal += price * quantity;
-                });
-                subtotalElem.textContent = `$${subtotal.toFixed(2)}`;
-                totalElem.textContent = `$${(subtotal + shippingCost).toFixed(2)}`;
-                saveCart();
-            }
-
-            function addItemToCart(title, info, price, image, quantity = 1) {
-                const itemHTML = `
-                    <div class="cart__item">
-                        <img src="${image}" alt="${title}" class="cart__item-image">
-                        <div class="cart__item-details">
-                            <h2 class="cart__item-title">${title}</h2>
-                            <p class="cart__item-info">${info}</p>
-                            <p class="cart__item-price">${price}</p>
-                        </div>
-                        <div class="cart__item-quantity">
-                            <button class="cart__item-btn cart__item-btn--decrease">-</button>
-                            <span class="cart__item-count">${quantity}</span>
-                            <button class="cart__item-btn cart__item-btn--increase">+</button>
-                        </div>
-                        <button class="cart__item-remove">&times;</button>
-                    </div>`;
-                cartContainer.insertAdjacentHTML('beforeend', itemHTML);
-                updateEventListeners();
-                updateSummary();
-            }
-
-            function updateEventListeners() {
-                document.querySelectorAll('.cart__item-btn--decrease').forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        const countElem = btn.nextElementSibling;
-                        let count = parseInt(countElem.textContent);
-                        if (count > 1) {
-                            countElem.textContent = count - 1;
-                            updateSummary();
-                        }
-                    });
-                });
-
-                document.querySelectorAll('.cart__item-btn--increase').forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        const countElem = btn.previousElementSibling;
-                        countElem.textContent = parseInt(countElem.textContent) + 1;
-                        updateSummary();
-                    });
-                });
-
-                document.querySelectorAll('.cart__item-remove').forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        btn.closest('.cart__item').remove();
-                        updateSummary();
-                    });
-                });
-            }
-
-            loadCart();
-        });
-    </script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__line"></div>
+            <div class="footer__inner">
+                <div class="footer__socials">
+                    <a href="" class="icon">
+                        <img src="images/socials-1.svg" alt="" class="icon__link">
+                    </a>
+                    <a href="" class="icon">
+                        <img src="images/socials-2.svg" alt="" class="icon__link">
+                    </a>
+                    <a href="" class="icon">
+                        <img src="images/socials-3.svg" alt="" class="icon__link">
+                    </a>
+                    <a href="" class="icon">
+                        <img src="images/socials-4.svg" alt="" class="icon__link">
+                    </a>
+                </div>
+                <div class="footer__email">
+                    <a href="" class="footer__email-link">Give an email, get the newsletter.</a>
+                    <a href="" class="icon">
+                        <img src="images/arrow.svg" alt="" class="icon__link">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
