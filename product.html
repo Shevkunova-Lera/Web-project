@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lira Earrings Product Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <img src="logo.svg" alt="logo" class="logo__link">
+                </a>
+                <div class="header__menu">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="shop.html" class="menu__list-link">Shop</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__list-link">Blog</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__list-link">Our story</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__list-link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="menu__icons">
+                        <a href="" class="icon">
+                            <img src="icon-1.svg" alt="" class="icon__link">
+                        </a>
+                        <a href="" class="icon">
+                            <img src="icon-2.svg" alt="" class="icon__link">
+                        </a>
+                        <a href="" class="icon">
+                            <img src="icon-3.svg" alt="" class="icon__link">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__line"></div>
+        </div>
+    </header>
+
+    <section class="product">
+        <div class="container">
+            <div class="product__inner">
+                <div class="product__gallery">
+                    <div class="gallery-images">
+                        <img src="hairpins.jpg" alt="Thumbnail 1" class="thumbnail active" onclick="changeImage(this)">
+                        <img src="lira-earrings.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+                        <img src="lira-earrings.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+                        <img src="lira-earrings.jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeImage(this)">
+                    </div>
+                    <div class="main-image">
+                        <img id="mainImage" src="lira-earrings.jpg" alt="Lira Earrings">
+                    </div>
+                </div>
+
+                <div class="product__details">
+                    <h2 class="product__details-title">Lira Earrings</h2>
+                    <p class="product__details-price">$ 20,00</p>
+                    <div class="product__details-rating">
+                        <img src="star.svg" alt="" class="rating-img">
+                        <img src="star.svg" alt="" class="rating-img">
+                        <img src="star.svg" alt="" class="rating-img">
+                        <img src="star.svg" alt="" class="rating-img">
+                        <img src="star.svg" alt="" class="rating-img">
+                        <p class="rating-text">1 customer review</p>
+                    </div>
+                    <p class="product__details-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat
+                        hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget
+                        arcu facilisis consequat sed eu felis.
+                    </p>
+                    <div class="product__details-action">
+                        <div class="quantity-selector">
+                            <!-- <button class="quantity-btn">-</button> -->
+                            <input type="number" value="1" min="1" class="quantity-input">
+                            <!-- <button class="quantity-btn">+</button> -->
+                        </div>
+                        <a href="cart.html" class="product__details-btn">ADD TO CART</a>
+                        <img src="wish.svg" alt="" class="details-action-wishlist">
+                    </div>
+                    <div class="product-meta">
+                        <p>SKU: <span>12</span></p>
+                        <p>Categories: <span>Fashion, Style</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="description">
+        <div class="container">
+            <div class="description__text">
+                <h3 class="description__text-title">Description</h3>
+                <div class="description__text-line"></div>
+                <p class="description__text-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                    placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero.
+                    Sed quis mauris eget arcu facilisis consequat sed eu felis. Nunc sed porta augue. Morbi porta tempor
+                    odio, in molestie diam bibendum sed.</p>
+            </div>
+            <div class="description__text">
+                <h3 class="description__text-title">Aditional information</h3>
+                <div class="description__text-line"></div>
+                <p class="description__text-p">
+                    Weight: <span>kg</span>
+                    Dimentions: <span>15 x 10 x 1 cm</span>
+                    Colours: <span>Black, Browns, White</span>
+                    Material: <span>Metal</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="container">
+            <h3 class="reviews__title">Reviews</h3>
+            <div class="description__text-line"></div>
+            <div class="reviews__inner">
+                <div class="reviews__list" id="reviewsList">
+                    <h3 class="reviews__list-title">2 Reviews for Lira Earrings</h3>
+                    <div class="review" id="reviewTemplate" style="display: none;">
+                        <h3 class="review__list-author">Anonymous</h3>
+                        <span class="review__list-date">Date</span>
+                        <div class="review__list-rating" aria-label="Rating"></div>
+                        <p class="review__list-text">Review text</p>
+                    </div>
+                </div>
+                <div class="reviews__form">
+                    <h3 class="reviews__form-title">Add a Review</h3>
+                    <div class="reviews__form-text">
+                        Your email address will not be published. Required fields are marked *
+                    </div>
+                    <form id="reviewForm">
+                        <textarea class="reviews__form-textarea" name="review" placeholder="Your Review*"
+                            required></textarea>
+                        <input class="reviews__form-input" type="text" name="name" placeholder="Enter your name*"
+                            required>
+                        <input class="reviews__form-input" type="email" name="email" placeholder="Enter your email*"
+                            required>
+                        <div class="reviews__form-rating">
+                            <label>Your Rating*</label>
+                            <div class="reviews__stars" id="starRating">
+                                <span class="reviews__star" data-value="1">★</span>
+                                <span class="reviews__star" data-value="2">★</span>
+                                <span class="reviews__star" data-value="3">★</span>
+                                <span class="reviews__star" data-value="4">★</span>
+                                <span class="reviews__star" data-value="5">★</span>
+                            </div>
+                        </div>
+                        <button class="reviews__form-submit" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Функция для изменения главного изображения
+        function changeImage(thumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = thumbnail.src;
+
+            // Обновляем активный класс у миниатюр
+            document.querySelectorAll('.thumbnail').forEach(img => img.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const reviewForm = document.getElementById('reviewForm');
+            const reviewsList = document.getElementById('reviewsList');
+            const reviewTemplate = document.getElementById('reviewTemplate');
+            const stars = document.querySelectorAll('.reviews__star');
+            let selectedRating = 0;
+
+
+            stars.forEach(star => {
+                star.addEventListener('click', () => {
+                    selectedRating = parseInt(star.getAttribute('data-value'));
+                    updateStarRating(selectedRating);
+                });
+            });
+
+            const updateStarRating = (rating) => {
+                stars.forEach(star => {
+                    star.classList.toggle('selected', parseInt(star.getAttribute('data-value')) <= rating);
+                });
+            };
+
+            reviewForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(reviewForm);
+                const reviewText = formData.get('review');
+                const authorName = formData.get('name');
+                const currentDate = new Date().toLocaleDateString();
+
+                if (!selectedRating) {
+                    alert('Please select a rating!');
+                    return;
+                }
+
+                const newReview = reviewTemplate.cloneNode(true);
+                newReview.style.display = 'block';
+                newReview.querySelector('.review__list-author').textContent = authorName;
+                newReview.querySelector('.review__list-date').textContent = currentDate;
+                newReview.querySelector('.review__list-text').textContent = reviewText;
+
+                const ratingContainer = newReview.querySelector('.review__list-rating');
+                for (let i = 0; i < selectedRating; i++) {
+                    const star = document.createElement('span');
+                    star.textContent = '★';
+                    star.style.color = '#f39c12';
+                    ratingContainer.appendChild(star);
+                }
+
+                reviewsList.appendChild(newReview);
+
+                reviewForm.reset();
+                updateStarRating(0);
+                selectedRating = 0;
+            });
+        });
+
+        // product.html
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartBtn = document.querySelector('.product__details-btn');
+            const quantityInput = document.querySelector('.quantity-input');
+
+            addToCartBtn.addEventListener('click', () => {
+                const productId = document.querySelector('.shop__item--highlighted').dataset.index; // Получаем ID товара
+                const quantity = parseInt(quantityInput.value);
+
+                // Получаем текущую корзину из localStorage или создаем пустую
+                let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+                // Обновляем количество товара в корзине
+                cart[productId] = (cart[productId] || 0) + quantity;
+
+                // Сохраняем обновленную корзину в localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+            });
+        });
+    </script>
+</body>
+
+</html>

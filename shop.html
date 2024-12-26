@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <img src="logo.svg" alt="logo" class="logo__link">
+                </a>
+                <div class="header__menu">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="shop.html" class="menu__list-link">Shop</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__list-link">Blog</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__list-link">Our story</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__list-link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="menu__icons">
+                        <a href="" class="icon">
+                            <img src="icon-1.svg" alt="" class="icon__link">
+                        </a>
+                        <a href="" class="icon">
+                            <img src="icon-2.svg" alt="" class="icon__link">
+                        </a>
+                        <a href="" class="icon">
+                            <img src="icon-3.svg" alt="" class="icon__link">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__line"></div>
+    </header>
+
+
+    <section class="shopp">
+        <div class="container">
+            <h1 class="header__title">Shop</h1>
+            <div class="shopp__inner">
+                <div class="shopp__controls">
+                    <div class="shopp__controls-search">
+                        <input type="search" class="search-input" placeholder="Search...">
+                        <span class="search-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="shopp__controls-sort">
+                        <select id="sort" class="sort-select">
+                            <option value="" hidden disabled selected>Sort By</option>
+                            <option value="default">Default</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                        </select>
+                    </div>
+                    <div class="shop__filter">
+                        <label for="price" class="shop__filter-label">Price: $40 - $180</label>
+                        <input type="range" id="price" class="shop__filter-range" min="40" max="180">
+                    </div>
+                </div>
+
+                <div class="shop__items">
+                    <div class="shop__item" data-index="0">
+                        <img src="lira-earrings.jpg" alt="Lira Earrings" class="shop__item-image">
+                        <div class="shop__item-icons">
+                            <a href="product.html" class="shop__item-icon">View more</a>
+                        </div>
+                        <h2 class="shop__item-name">Lira Earrings</h2>
+                        <p class="shop__item-price">$20.00</p>
+                    </div>
+                    <div class="shop__item" data-index="1">
+                        <img src="hal-earrings.jpg" alt="Hal Earrings" class="shop__item-image">
+                        <div class="shop__item-icons">
+                            <a href="product.html" class="shop__item-icon">View more</a>
+                        </div>
+                        <h2 class="shop__item-name">Hal Earrings</h2>
+                        <p class="shop__item-price">$25.00</p>
+                    </div>
+                    <div class="shop__item" data-index="2">
+                        <img src="kaede-hairpins.jpg" alt="Kaede Hair Pin Set Of 3" class="shop__item-image">
+                        <div class="shop__item-icons">
+                            <a href="" class="shop__item-icon">View more</a>
+                        </div>
+                        <h2 class="shop__item-name">Kaede Hair Pin Set Of 3</h2>
+                        <p class="shop__item-price">$30.00</p>
+                    </div>
+                    <div class="shop__item" data-index="3">
+                        <img src="hairpins.jpg" alt="Hair Pin Set of 3" class="shop__item-image">
+                        <div class="shop__item-icons">
+                            <a href="" class="shop__item-icon">View more</a>
+                        </div>
+                        <h2 class="shop__item-name">Hair Pin Set of 3</h2>
+                        <p class="shop__item-price">$30.00</p>
+                    </div>
+                    <div class="shop__item" data-index="4">
+                        <img src="platine-necklace.jpg" alt="Platine Necklace" class="shop__item-image">
+                        <div class="shop__item-icons">
+                            <a href="" class="shop__item-icon">View more</a>
+                        </div>
+                        <h2 class="shop__item-name">Platine Necklace</h2>
+                        <p class="shop__item-price">$19.00</p>
+                    </div>
+                    <div class="shop__item shop__item--highlighted" data-index="5">
+                        <img src="yuki-hairpins.jpg" alt="Yuki Hair Pin Set of 3" class="shop__item-image">
+                        <div class="shop__item-icons">
+                            <a href="" class="shop__item-icon">View more</a>
+                        </div>
+                        <h2 class="shop__item-name">Yuki Hair Pin Set of 3</h2>
+                        <p class="shop__item-price">$29.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sortSelect = document.getElementById("sort");
+            const itemsContainer = document.querySelector(".shop__items");
+            const items = Array.from(itemsContainer.children);
+
+            // Добавляем исходный порядок в data-index
+            items.forEach((item, index) => {
+                item.dataset.index = index;
+            });
+
+            sortSelect.addEventListener("change", (event) => {
+                const value = event.target.value;
+
+                if (value === "price-asc") {
+                    // Сортировка по возрастанию цены
+                    items.sort((a, b) => {
+                        const priceA = parseFloat(a.querySelector(".shop__item-price").textContent.replace("$", ""));
+                        const priceB = parseFloat(b.querySelector(".shop__item-price").textContent.replace("$", ""));
+                        return priceA - priceB;
+                    });
+                } else if (value === "price-desc") {
+                    // Сортировка по убыванию цены
+                    items.sort((a, b) => {
+                        const priceA = parseFloat(a.querySelector(".shop__item-price").textContent.replace("$", ""));
+                        const priceB = parseFloat(b.querySelector(".shop__item-price").textContent.replace("$", ""));
+                        return priceB - priceA;
+                    });
+                } else if (value === "default") {
+                    // Возврат к исходному порядку
+                    items.sort((a, b) => a.dataset.index - b.dataset.index);
+                }
+
+                // Обновление DOM с отсортированными элементами
+                items.forEach(item => itemsContainer.appendChild(item));
+            });
+        });
+    </script>
+</body>
+
+</html>
