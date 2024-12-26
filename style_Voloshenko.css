@@ -248,7 +248,7 @@ p{
 
 /* _______Contact_______ */
 
-.contact_conteiner {
+.contact_container {
   max-width: 908px;
   margin: 0 auto;
   text-align: center;
@@ -295,9 +295,8 @@ p{
   background-color: #000;
   color: #fff;
   width: 500px;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
+  height: 53px;
+  padding: 16px 229px;
   border-radius: 4px;
 }
 .contact_btn:hover{
