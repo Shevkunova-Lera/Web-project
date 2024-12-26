@@ -1,0 +1,321 @@
+/* header */
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header__container,
+.footer__container {
+  max-width: 1248px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  height: 100px;
+}
+
+.header__menu {
+  width: 580px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu__item {
+  margin: 0 28px;
+}
+
+.menu__list-link {
+  font-size: 16px;
+  line-height: 27px;
+  color: #000;
+}
+
+.menu__list-link:hover {
+  text-decoration: underline;
+}
+
+.menu__icons {
+  display: flex;
+}
+
+.icon + .icon {
+  margin-left: 38px;
+}
+
+/* __________MyAccount - Desktop____________*/
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 33px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.sign_in__body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 110px;
+}
+
+.switch {
+  display: flex;
+  background-color: #EFEFEF;
+  border-radius: 8px;
+  width: 500px;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.sign_in__btn,
+.register__btn {
+  display: inline-block;
+  width: 236px;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  color: #000;
+
+  margin: 5px;
+}
+
+.sign_in__btn.active,
+.register__btn.active {
+  background-color: #fff;
+}
+
+.sign_in_input, .register_in_input {
+  width: 100%;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #D8D8D8;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+p{
+  font-size: 12px;
+  font-weight: 400;
+  color: #707070;
+  margin-bottom: 24px;
+  margin-top: -16px;
+}
+.sign_in_checkbox {
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.sign_in__btn_main {
+  display: flex;
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.sign_in__btn_main:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.forgotten_password {
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 100px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+  height: 100px;
+}
+
+.footer__line {
+  height: 1px;
+  background-color: #EFEFEF;
+}
+
+.footer__email {
+  display: flex;
+  justify-content: space-between;
+  width: 396px;
+  height: 30px;
+  border-bottom: 1px solid #000;
+}
+
+.footer__email-link {
+  font-size: 16px;
+  line-height: 27px;
+  color: #707070;
+}
+
+.footer__email-link:hover {
+  color: #000;
+}
+/* ________ResetPassword_______ */
+
+.forgot_container {
+  max-width: 561px;
+  margin: 0 auto;
+}
+.forgot_title{
+  margin-top: 128px;
+}
+.forgot_context{
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin-bottom: 76px;
+}
+.forgot_inner{
+  max-width:500px;
+  margin: auto;
+}
+.forgot_input{
+  width: 100%;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #D8D8D8;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 64px;
+}
+.reset_pasword_btn{
+  display: flex;
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.reset_pasword_btn:hover{
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+
+/* _______Contact_______ */
+
+.contact_conteiner {
+  max-width: 908px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact_title{
+  display: inline-block;
+  max-width: 561px;
+}
+.contact_us_title{
+  font-size: 33px;
+  font-weight: 500;
+  margin-bottom: 39px;
+}
+.title_hello{
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 64px;
+}
+.contact_input{
+  display: flex;
+  justify-content: space-between;
+}
+.contact_input_text{
+  width: 396px;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #D8D8D8;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 96px;
+}
+.input_massage{
+  width: 100%;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #D8D8D8;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 96px;
+}
+.contact_btn{
+  display: flex; 
+  margin: auto; 
+  background-color: #000;
+  color: #fff;
+  width: 500px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.contact_btn:hover{
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}
+/* .subject_title{
+  width: 396px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #D8D8D8;
+  font-size: 16px;
+  margin-bottom: 96px;
+}
+.subject_title{
+  overflow: hidden;
+  text-align: left;
+}
+.subject_menu{
+  display: none;
+} */
