@@ -501,6 +501,30 @@ a {
     width: 100px;
     height: 1px;
     background-color: #000;
+    margin-bottom: 19px;
+}
+
+/* ____________*/
+
+.description__text-title{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 6px;
+
+}
+
+.description__text-p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 59px;
+    list-style: none;
+}
+.description__text-p ul{
+    margin-bottom: 5px;
+}
+.description__text-p span{
+    color: #707070;
+    margin-left: 3px;
 }
 
 /* Reviews Block Styles */
@@ -716,4 +740,20 @@ a {
     border: none;
     padding: 10px;
     cursor: pointer;
+}
+
+/*________________*/
+
+.similar-items{
+    margin-top: 34px;
+}
+.similar-items_inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 57px;
+}
+.similar-items_title{
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 53px;
 }

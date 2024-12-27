@@ -67,6 +67,11 @@ body {
 }
 
 .container {
+  max-width: 1248px;
+  margin: 0 auto;
+}
+
+.container_account{
   max-width: 500px;
   margin: 0 auto;
 }
@@ -271,7 +276,7 @@ p{
   display: flex;
   justify-content: space-between;
 }
-.contact_input_text{
+.contact_input_text, .subject_select{
   width: 396px;
   padding-bottom: 20px;
   border: none;
@@ -279,6 +284,7 @@ p{
   outline: none;
   font-size: 16px;
   margin-bottom: 96px;
+  color: #707070;
 }
 .input_massage{
   width: 100%;
@@ -318,3 +324,50 @@ p{
 .subject_menu{
   display: none;
 } */
+
+/*__________About_________*/
+.header__line {
+  height: 1px;
+  background-color: #EFEFEF;
+}
+.container_about{
+  max-width: 672px;
+  margin: 0 auto;
+}
+.about_title{
+  text-align: center;
+  margin-bottom: 46px;
+  margin-top: 96px;
+}
+.about_title h1{
+  font-size: 33px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.about_title h3{
+  font-size: 20px;
+  font-weight: 400;
+}
+.about_subtitle{
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 23px;
+}
+.about_img{
+  margin-bottom: 48px;
+}
+.about_text-p{
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 39px;
+  color: #000;
+  line-height: 27px;
+}
+.about_list{
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 39px;
+  color: #000;
+  margin-bottom: 39px;
+  margin-top: -23px;
+}
