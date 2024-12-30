@@ -26,21 +26,21 @@
                                 <a href="" class="menu__list-link">Blog</a>
                             </li>
                             <li class="menu__item">
-                                <a href="" class="menu__list-link">Our story</a>
+                                <a href="About.html" class="menu__list-link">Our story</a>
                             </li>
                             <li class="menu__item">
-                                <a href="" class="menu__list-link">Contact</a>
+                                <a href="contact.html" class="menu__list-link">Contact</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="menu__icons">
-                        <a href="" class="icon">
+                        <a href="shop.html" class="icon">
                             <img src="images/icon-1.svg" alt="" class="icon__link">
                         </a>
-                        <a href="" class="icon">
+                        <a href="cart.html" class="icon">
                             <img src="images/icon-2.svg" alt="" class="icon__link">
                         </a>
-                        <a href="" class="icon">
+                        <a href="💻 MyAccount - Desktop.html" class="icon">
                             <img src="images/icon-3.svg" alt="" class="icon__link">
                         </a>
                     </div>
@@ -51,7 +51,7 @@
     </header>
 
     <section class="cart">
-        <h1 class="cart__title">Shopping Cart</h1>
+        <h1 class="title cart__title">Shopping Cart</h1>
         <div class="cart__items">
             <div class="cart__item">
                 <img src="images/lira-earrings.jpg" alt="Lira Earrings" class="cart__item-image">
@@ -68,16 +68,43 @@
                 <button class="cart__item-remove">&times;</button>
             </div>
         </div>
-        <div class="cart__summary">
-            <p class="cart__summary-subtotal">Subtotal: <span>$65,00</span></p>
-            <p class="cart__summary-shipping">Shipping: <span>$5,00</span></p>
-            <p class="cart__summary-total">Total: <span>$87,00</span></p>
+
+        <div class="cart__items">
+            <div class="cart__item">
+                <img src="images/lira-earrings.jpg" alt="Lira Earrings" class="cart__item-image">
+                <div class="cart__item-details">
+                    <h2 class="cart__item-title">Lira Earrings</h2>
+                    <p class="cart__item-info">Black / Medium</p>
+                    <p class="cart__item-price">$20,00</p>
+                </div>
+                <div class="cart__item-quantity">
+                    <button class="cart__item-btn cart__item-btn--decrease">-</button>
+                    <span class="cart__item-count">3</span>
+                    <button class="cart__item-btn cart__item-btn--increase">+</button>
+                </div>
+                <button class="cart__item-remove">&times;</button>
+            </div>
         </div>
-        <div class="cart__actions">
-            <input type="text" class="cart__coupon" placeholder="Coupon Code">
-            <a class="cart__apply-btn">APPLY COUPON</a>
-            <a href="shop.html" class="cart__update-btn">UPDATE CART</a>
-            <a class="cart__checkout-btn">PROCEED TO CHECKOUT</a>
+        
+        
+        <div class="container">
+            <div class="cart__update-block">
+                <a href="shop.html" class="cart__update-btn">UPDATE CART</a>
+            </div>
+            <div class="cart__bottom-block">
+                <div class="cart__summary">
+                    <p class="cart__summary-subtotal">Subtotal: <span>$65,00</span></p>
+                    <p class="cart__summary-shipping">Shipping: <span>$5,00</span></p>
+                    <input type="text" class="cart__coupon" placeholder="Coupon Code">
+                    <a class="cart__apply-btn">APPLY COUPON</a>
+                    
+                </div>
+                <div class="cart__actions">
+                    <p class="cart__summary-total">Total: <span>$87,00</span></p>
+                    
+                    <a class="cart__checkout-btn">PROCEED TO CHECKOUT</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -100,8 +127,8 @@
                     </a>
                 </div>
                 <div class="footer__email">
-                    <a href="" class="footer__email-link">Give an email, get the newsletter.</a>
-                    <a href="" class="icon">
+                    <a href="contact.html" class="footer__email-link">Give an email, get the newsletter.</a>
+                    <a href="contact.html" class="icon">
                         <img src="images/arrow.svg" alt="" class="icon__link">
                     </a>
                 </div>

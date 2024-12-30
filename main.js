@@ -210,3 +210,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadCart();
 });
+
+// MyAccount.html
+const signInBtn = document.querySelector('.sign_in__btn');
+    const registerBtn = document.querySelector('.register__btn');
+    const signInForm = document.getElementById('sign_in_form');
+    const registerForm = document.getElementById('register_form');
+
+    signInBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        signInBtn.classList.add('active');
+        registerBtn.classList.remove('active');
+        signInForm.classList.remove('hidden');
+        registerForm.classList.add('hidden');
+    });
+    registerBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        registerBtn.classList.add('active');
+        signInBtn.classList.remove('active');
+        registerForm.classList.remove('hidden');
+        signInForm.classList.add('hidden');
+    });

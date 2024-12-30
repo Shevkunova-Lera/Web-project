@@ -11,10 +11,10 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__container">
+        <div class="container">
             <div class="header__inner">
-                <a href="#" class="logo">
-                    <img src="images\logo.svg" alt="logo" class="logo__link">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="logo" class="logo__link">
                 </a>
                 <div class="header__menu">
                     <nav class="menu">
@@ -26,27 +26,28 @@
                                 <a href="" class="menu__list-link">Blog</a>
                             </li>
                             <li class="menu__item">
-                                <a href="" class="menu__list-link">Our story</a>
+                                <a href="About.html" class="menu__list-link">Our story</a>
                             </li>
                             <li class="menu__item">
-                                <a href="" class="menu__list-link">Contact</a>
+                                <a href="contact.html" class="menu__list-link">Contact</a>
                             </li>
                         </ul>
                     </nav>
                     <div class="menu__icons">
-                        <a href="" class="icon">
-                            <img src="images\icon-1.svg" alt="" class="icon__link">
+                        <a href="shop.html" class="icon">
+                            <img src="images/icon-1.svg" alt="" class="icon__link">
                         </a>
-                        <a href="" class="icon">
-                            <img src="images\icon-2.svg" alt="" class="icon__link">
+                        <a href="cart.html" class="icon">
+                            <img src="images/icon-2.svg" alt="" class="icon__link">
                         </a>
-                        <a href="" class="icon">
-                            <img src="images\icon-3.svg" alt="" class="icon__link">
+                        <a href="💻 MyAccount - Desktop.html" class="icon">
+                            <img src="images/icon-3.svg" alt="" class="icon__link">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="header__line"></div>
     </header>
 
     <div class="container_account">
@@ -89,21 +90,21 @@
             <div class="footer__inner">
                 <div class="footer__socials">
                     <a href="" class="icon">
-                        <img src="images\socials-1.svg" alt="" class="icon__link">
+                        <img src="images/socials-1.svg" alt="" class="icon__link">
                     </a>
                     <a href="" class="icon">
-                        <img src="images\socials-2.svg" alt="" class="icon__link">
+                        <img src="images/socials-2.svg" alt="" class="icon__link">
                     </a>
                     <a href="" class="icon">
-                        <img src="images\socials-3.svg" alt="" class="icon__link">
+                        <img src="images/socials-3.svg" alt="" class="icon__link">
                     </a>
                     <a href="" class="icon">
-                        <img src="images\socials-4.svg" alt="" class="icon__link">
+                        <img src="images/socials-4.svg" alt="" class="icon__link">
                     </a>
                 </div>
                 <div class="footer__email">
-                    <a href="" class="footer__email-link">Give an email, get the newsletter.</a>
-                    <a href="" class="icon">
+                    <a href="contact.html" class="footer__email-link">Give an email, get the newsletter.</a>
+                    <a href="contact.html" class="icon">
                         <img src="images/arrow.svg" alt="" class="icon__link">
                     </a>
                 </div>
@@ -111,26 +112,6 @@
         </div>
     </footer>
 
-    <script>
-    const signInBtn = document.querySelector('.sign_in__btn');
-    const registerBtn = document.querySelector('.register__btn');
-    const signInForm = document.getElementById('sign_in_form');
-    const registerForm = document.getElementById('register_form');
-
-    signInBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        signInBtn.classList.add('active');
-        registerBtn.classList.remove('active');
-        signInForm.classList.remove('hidden');
-        registerForm.classList.add('hidden');
-    });
-    registerBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        registerBtn.classList.add('active');
-        signInBtn.classList.remove('active');
-        registerForm.classList.remove('hidden');
-        signInForm.classList.add('hidden');
-    });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
