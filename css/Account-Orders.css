@@ -1,0 +1,53 @@
+.account_menu {
+    margin-top: 101px;
+}
+
+.account_menu-items {
+    margin-bottom: 34px;
+}
+
+.account_menu-items_span {
+    color: #000;
+}
+
+.account_menu-item {
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 49px;
+    color: #707070;
+}
+
+.orders_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 39px 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.table-head {
+    text-align: left;
+    border-bottom: 1px solid #000;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    padding: 24px 0px;
+}
+
+.orders_table td {
+    padding: 24px 0px;
+    text-align: left;
+}
+
+.orders_table_tr {
+    font-size: 16px;
+    color: #707070;
+    border-bottom: 1px solid #D8D8D8;
+
+}
+
+.orders_table_link {
+    font-size: 16px;
+    font-weight: 700;
+    color: #A18A68;
+}
