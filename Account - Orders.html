@@ -1,14 +1,20 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account-Orders</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
     <link rel="stylesheet" href="style_Voloshenko.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -50,39 +56,59 @@
         <div class="header__line"></div>
     </header>
 
-    <div class="container_account">
-        <div class="sign_in__body">
-            <h1 class="myAccount_title">My Account</h1>
-            <div class="switch">
-                <a href="#" class="sign_in__btn active">Sign in</a>
-                <a href="#" class="register__btn">Register</a>
-            </div>
-        
-            <div id="sign_in_form">
-                <input type="email" class="sign_in_input" placeholder="Email">
-                <input type="password" class="sign_in_input" placeholder="Password">
-                <div class="sign_in_checkbox">
-                    <input type="checkbox"> 
-                    <label>Remember me</label>
+    <section class="account_dashboard">
+        <div class="container">
+            <div class="account_menu">
+                <div class="account_menu-items">
+                    <a href="#" class="account_menu-item">Wish list</a>
+                    <a href="#" class="account_menu-item"><span class="account_menu-items_span">Orders</span></a>
+                    <a href="#" class="account_menu-item">Account details</a>
+                    <a href="#" class="account_menu-item">Logout</a>
                 </div>
-                <a href="#" class="sign_in__btn_main">SIGN IN</a>
-                <a href="ResetPassword.html" class="forgotten_password">Have you forgotten your password?</a>
+                <div class="footer__line"></div>
             </div>
-
-            <div id="register_form" class="hidden">
-                <input type="text "class="register_in_input" placeholder="First name*">
-                <input type="text "class="register_in_input" placeholder="Last name*">
-                <input type="text "class="register_in_input" placeholder="Display name*">
-                <p class="register_warning">This will be how your name will be displayed in the account section and in reviews.</p>
-                <input type="email" class="register_in_input" placeholder="Email address*">
-                <input type="tel"class="register_in_input" placeholder="Phone number*">
-                <input type="password"class="register_in_input" placeholder="Password">
-                <input type="password"class="register_in_input" placeholder="Confirm password">
-
-                <a href="#" class="sign_in__btn_main">REGISTER</a>
-            </div>
+            <!-- <div class="account_massage">
+                <div class="massage_items">
+                    <p class="no_order">No order has been made yet.</p>
+                    <p class="brouse_product">BROWSE PRODUCT</p>
+                </div>
+            </div> -->
+            <table class="orders_table">
+                <thead class="orders_table-head">
+                    <tr class="orders_table_tr">
+                        <th class="table-head">ORDER NUMBER</th>
+                        <th class="table-head">DATE</th>
+                        <th class="table-head">STATUS</th>
+                        <th class="table-head">TOTAL</th>
+                        <th class="table-head">ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody class="orders_table-body">
+                    <tr class="orders_table_tr">
+                        <td>7643980998990</td>
+                        <td>October 8, 2021</td>
+                        <td>Delivered</td>
+                        <td>$105</td>
+                        <td><a href="#" class="orders_table_link">View Product</a></td>
+                    </tr>
+                    <tr class="orders_table_tr">
+                        <td>7643980998990</td>
+                        <td>October 8, 2021</td>
+                        <td>Delivered</td>
+                        <td>$105</td>
+                        <td><a href="#" class="orders_table_link">View Product</a></td>
+                    </tr>
+                    <tr class="orders_table_tr">
+                        <td>7643980998990</td>
+                        <td>October 8, 2021</td>
+                        <td>Delivered</td>
+                        <td>$105</td>
+                        <td><a href="#" class="orders_table_link">View Product</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
@@ -111,7 +137,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="main.js"></script>
 </body>
+
 </html>
