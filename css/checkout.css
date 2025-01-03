@@ -1,0 +1,194 @@
+/* checkout */
+.checkout {
+    margin-top: 96px;
+}
+
+.checkout__main-title {
+    text-align: center;
+    font-size: 33px;
+    line-height: 43px;
+    font-weight: 500;
+    margin-bottom: 64px;
+}
+
+.checkout__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Блок "Billing Details" */
+.checkout__billing-details {
+    width: 580px;
+}
+
+.checkout__billing-text {
+    color: #707070;
+    margin-bottom: 30px;
+}
+
+.checkout__billing-link {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.checkout__title {
+    font-size: 26px;
+    line-height: 35px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.billing-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.billing-form__name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.billing-form__name input {
+    width: 270px;
+}
+
+.billing-form__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.billing-form__label {
+    color: #707070;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.billing-form__input,
+.billing-form__select,
+.billing-form__textarea {
+    width: 580px;
+    height: 25px;
+    margin-bottom: 25px;
+    border: none;
+    border-bottom: 1px solid #efefef;
+    color: #707070;
+}
+
+.billing-form__textarea {
+    resize: none;
+}
+
+.checkout__order-summary {
+    width: 48%;
+}
+
+.order-summary {
+    background-color: #EFEFEF;
+    padding: 43px;
+}
+
+.order-summary__name {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #D8D8D8;
+    margin-bottom: 22px;
+}
+
+.order-summary__list {
+    list-style: none;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.order-summary__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.order-summary__totals {
+    margin-bottom: 61px;
+}
+
+.order-summary__subtotal {
+    margin-bottom: 14px;
+    border-bottom: 1px solid #D8D8D8;
+    padding-bottom: 10px;
+}
+
+.order-summary__shipping {
+    margin-bottom: 24px;
+    border-bottom: 1px solid #D8D8D8;
+    padding-bottom: 10px;
+}
+
+.order-summary__total span {
+    font-weight: bold;
+}
+
+.order-summary__subtotal,
+.order-summary__shipping,
+.order-summary__total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-summary__payment-methods {
+    margin-top: 20px;
+}
+
+.order-summary__payment-option {
+    display: block;
+    margin-bottom: 35px;
+    font-size: 1rem;
+}
+
+.payment-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 31px;
+}
+
+.payment-card-info div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.payment-card-info__input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    background-color: #d9d9d9d9;
+    height: 56px;
+}
+
+.payment-card-info__input::placeholder {
+    color: #efefef;
+}
+
+.order-summary__button {
+    display: block;
+    width: 461px;
+    height: 53px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+.order-summary__button:hover {
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+}

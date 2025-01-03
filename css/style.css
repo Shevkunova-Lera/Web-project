@@ -1,0 +1,284 @@
+@import url(cart.css);
+@import url(checkout.css);
+@import url(product.css);
+@import url(shop.css);
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1248px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__title {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 43px;
+    color: #000;
+}
+
+/* Header styles */
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    height: 100px;
+}
+
+.header__menu {
+    width: 580px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__list {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu__item {
+    margin: 0 28px;
+}
+
+.menu__list-link {
+    font-size: 16px;
+    line-height: 27px;
+    color: #000;
+}
+
+.menu__list-link:hover {
+    text-decoration: underline;
+}
+
+.menu__icons {
+    display: flex;
+}
+
+.icon+.icon {
+    margin-left: 38px;
+}
+
+.header__line {
+    height: 1px;
+    background-color: #EFEFEF;
+}
+
+/* Hero section */
+
+.hero__slider {
+    position: relative;
+    overflow: hidden;
+    height: 85vh;
+}
+
+.hero__slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.hero__slide.active {
+    left: 0;
+    opacity: 1;
+}
+
+.hero__wrapper {
+    position: relative;
+    margin-left: 140px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero__image {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.hero__content {
+    position: absolute;
+    top: 50%;
+    left: 39px;
+    transform: translateY(-50%);
+    color: #fff;
+    max-width: 300px;/
+}
+
+.hero__title {
+    font-size: 33px;
+    font-weight: 500;
+    margin: 0;
+    color: #fff;
+}
+
+.hero__price {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 35px;
+    margin: 16px 0 48px 0;
+    color: #fff;
+}
+
+.hero__button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background-color: transparent;
+    border: solid 2px #fff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.hero__button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* .hero__button:hover {
+    background-color: #333;
+} */
+
+/* Shop Section */
+.shop {
+    margin-top: 64px;
+}
+
+.shop__view-all {
+    font-size: 20px;
+    line-height: 26px;
+    color: #A18A68;
+}
+
+.shop__view-all:hover {
+    color: #000;
+}
+
+.shop__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.shop__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 57px;
+}
+
+.shop__item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.shop__item-icons {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Центрируем по горизонтали и вертикали */
+    opacity: 0;
+}
+
+.shop__item:hover .shop__item-icons {
+    opacity: 1;
+}
+
+.shop__item-icon {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    color: #000;
+    background-color: transparent;
+    border: solid 2px #000;
+    text-decoration: none;
+    border-radius: 6px;
+
+}
+
+.shop__item-image {
+    width: 100%;
+    border-radius: 8px;
+    transition: 0.3s;/
+}
+
+.shop__item:hover .shop__item-image {
+    opacity: 50%;
+}
+
+.shop__item-name {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    margin-top: 24px;
+}
+
+.shop__item-price {
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 26px;
+    color: #A18A68;
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 100px;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    height: 100px;
+}
+
+.footer__line {
+    height: 1px;
+    background-color: #EFEFEF;
+}
+
+.footer__email {
+    display: flex;
+    justify-content: space-between;
+    width: 396px;
+    height: 30px;
+    border-bottom: 1px solid #000;
+}
+
+.footer__email-link {
+    font-size: 16px;
+    line-height: 27px;
+    color: #707070;
+}
+
+.footer__email-link:hover {
+    color: #000;
+}
+
+

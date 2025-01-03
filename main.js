@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showSlide(currentIndex);
     }
 
-    setInterval(nextSlide, 5000); 
+    setInterval(nextSlide, 5000);
 });
 
 //shop.html
@@ -120,114 +120,81 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //cart.html
-document.addEventListener('DOMContentLoaded', () => {
-    const cartContainer = document.querySelector('.cart__items');
-    const subtotalElem = document.querySelector('.cart__summary-subtotal span');
-    const totalElem = document.querySelector('.cart__summary-total span');
-    const shippingCost = 5.00;
+document.addEventListener("DOMContentLoaded", () => {
+    const cartItems = document.querySelectorAll(".cart__item");
 
-    function loadCart() {
-        const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
-        savedCart.forEach(item => {
-            addItemToCart(item.title, item.info, item.price, item.image, item.quantity);
+    cartItems.forEach((item) => {
+        const decreaseBtn = item.querySelector(".cart__item-btn--decrease");
+        const increaseBtn = item.querySelector(".cart__item-btn--increase");
+        const removeBtn = item.querySelector(".cart__item-remove");
+        const itemCount = item.querySelector(".cart__item-count");
+
+        // Уменьшение количества
+        decreaseBtn.addEventListener("click", () => {
+            let count = parseInt(itemCount.textContent, 10);
+            if (count > 1) {
+                itemCount.textContent = count - 1;
+            } else {
+                alert("Количество товара не может быть меньше 1.");
+            }
         });
-        updateSummary();
+
+        // Увеличение количества
+        increaseBtn.addEventListener("click", () => {
+            let count = parseInt(itemCount.textContent, 10);
+            itemCount.textContent = count + 1;
+        });
+
+        // Удаление товара из корзины
+        removeBtn.addEventListener("click", () => {
+            item.remove();
+            updateCartTotal();
+        });
+    });
+
+    // Функция для обновления общей суммы корзины
+    function updateCartTotal() {
+        const cartItems = document.querySelectorAll(".cart__item");
+        let total = 0;
+
+        cartItems.forEach((item) => {
+            const priceElement = item.querySelector(".cart__item-price");
+            const itemCount = item.querySelector(".cart__item-count");
+            const price = parseFloat(priceElement.textContent.replace("$", ""));
+            const count = parseInt(itemCount.textContent, 10);
+
+            total += price * count;
+        });
+
+        // Обновление отображения общей суммы
+        const totalElement = document.querySelector(".cart__total");
+        if (totalElement) {
+            totalElement.textContent = `Total: $${total.toFixed(2)}`;
+        }
     }
 
-    function saveCart() {
-        const cartItems = Array.from(document.querySelectorAll('.cart__item')).map(item => {
-            return {
-                title: item.querySelector('.cart__item-title').textContent,
-                info: item.querySelector('.cart__item-info').textContent,
-                price: item.querySelector('.cart__item-price').textContent,
-                image: item.querySelector('.cart__item-image').src,
-                quantity: parseInt(item.querySelector('.cart__item-count').textContent)
-            };
-        });
-        localStorage.setItem('cart', JSON.stringify(cartItems));
-    }
-
-    function updateSummary() {
-        let subtotal = 0;
-        document.querySelectorAll('.cart__item').forEach(item => {
-            const price = parseFloat(item.querySelector('.cart__item-price').textContent.replace('$', '').replace(',', '.'));
-            const quantity = parseInt(item.querySelector('.cart__item-count').textContent);
-            subtotal += price * quantity;
-        });
-        subtotalElem.textContent = `$${subtotal.toFixed(2)}`;
-        totalElem.textContent = `$${(subtotal + shippingCost).toFixed(2)}`;
-        saveCart();
-    }
-
-    function addItemToCart(title, info, price, image, quantity = 1) {
-        const itemHTML = `
-            <div class="cart__item">
-                <img src="${image}" alt="${title}" class="cart__item-image">
-                <div class="cart__item-details">
-                    <h2 class="cart__item-title">${title}</h2>
-                    <p class="cart__item-info">${info}</p>
-                    <p class="cart__item-price">${price}</p>
-                </div>
-                <div class="cart__item-quantity">
-                    <button class="cart__item-btn cart__item-btn--decrease">-</button>
-                    <span class="cart__item-count">${quantity}</span>
-                    <button class="cart__item-btn cart__item-btn--increase">+</button>
-                </div>
-                <button class="cart__item-remove">&times;</button>
-            </div>`;
-        cartContainer.insertAdjacentHTML('beforeend', itemHTML);
-        updateEventListeners();
-        updateSummary();
-    }
-
-    function updateEventListeners() {
-        document.querySelectorAll('.cart__item-btn--decrease').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const countElem = btn.nextElementSibling;
-                let count = parseInt(countElem.textContent);
-                if (count > 1) {
-                    countElem.textContent = count - 1;
-                    updateSummary();
-                }
-            });
-        });
-
-        document.querySelectorAll('.cart__item-btn--increase').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const countElem = btn.previousElementSibling;
-                countElem.textContent = parseInt(countElem.textContent) + 1;
-                updateSummary();
-            });
-        });
-
-        document.querySelectorAll('.cart__item-remove').forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.closest('.cart__item').remove();
-                updateSummary();
-            });
-        });
-    }
-
-    loadCart();
+    // Инициализация обновления общей суммы
+    updateCartTotal();
 });
+
 
 // MyAccount.html
 const signInBtn = document.querySelector('.sign_in__btn');
-    const registerBtn = document.querySelector('.register__btn');
-    const signInForm = document.getElementById('sign_in_form');
-    const registerForm = document.getElementById('register_form');
+const registerBtn = document.querySelector('.register__btn');
+const signInForm = document.getElementById('sign_in_form');
+const registerForm = document.getElementById('register_form');
 
-    signInBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        signInBtn.classList.add('active');
-        registerBtn.classList.remove('active');
-        signInForm.classList.remove('hidden');
-        registerForm.classList.add('hidden');
-    });
-    registerBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        registerBtn.classList.add('active');
-        signInBtn.classList.remove('active');
-        registerForm.classList.remove('hidden');
-        signInForm.classList.add('hidden');
-    });
+signInBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    signInBtn.classList.add('active');
+    registerBtn.classList.remove('active');
+    signInForm.classList.remove('hidden');
+    registerForm.classList.add('hidden');
+});
+registerBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    registerBtn.classList.add('active');
+    signInBtn.classList.remove('active');
+    registerForm.classList.remove('hidden');
+    signInForm.classList.add('hidden');
+});

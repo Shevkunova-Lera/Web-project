@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="logo" class="logo__link">
+                </a>
+                <div class="header__menu">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="shop.html" class="menu__list-link">Shop</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__list-link">Blog</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="About.html" class="menu__list-link">Our story</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="contact.html" class="menu__list-link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="menu__icons">
+                        <a href="shop.html" class="icon">
+                            <img src="images/icon-1.svg" alt="" class="icon__link">
+                        </a>
+                        <a href="cart.html" class="icon">
+                            <img src="images/icon-2.svg" alt="" class="icon__link">
+                        </a>
+                        <a href="💻 MyAccount - Desktop.html" class="icon">
+                            <img src="images/icon-3.svg" alt="" class="icon__link">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__line"></div>
+    </header>
+
+    <div class="checkout">
+        <div class="container">
+            <h1 class="checkout__main-title">Checkout</h1>
+            <div class="checkout__inner">
+                <div class="checkout__billing-details">
+                    <p class="checkout__billing-text">Returning customer? <a href="💻 MyAccount - Desktop.html" class="checkout__billing-link">Click here to login</a></p>
+                    <h2 class="checkout__title">Billing Details</h2>
+                    <form class="billing-form" action="#" method="POST">
+                        <div class="billing-form__name">
+                            <div class="billing-form__field">
+                                <label class="billing-form__label" for="first-name">First Name *</label>
+                                <input class="billing-form__input" type="text" id="first-name" name="first_name" required>
+                            </div>
+                            <div class="billing-form__field">
+                                <label class="billing-form__label" for="last-name">Last Name *</label>
+                                <input class="billing-form__input" type="text" id="last-name" name="last_name" required>
+                            </div>
+                        </div>
+                        <div class="billing-form__field">
+                            <label class="billing-form__label" for="company-name">Company Name</label>
+                            <input class="billing-form__input" type="text" id="company-name" name="company_name">
+                        </div>
+                        <div class="billing-form__field">
+                            <label class="billing-form__label" for="country">Country *</label>
+                            <select class="billing-form__select" id="country" name="country" required>
+                                <option value="">Select a country</option>
+                                <option value="US">United States</option>
+                                <option value="UA">Ukraine</option>
+                            </select>
+                        </div>
+                        <div class="billing-form__field">
+                            <label class="billing-form__label" for="street-address">Street Address *</label>
+                            <input class="billing-form__input" type="text" id="street-address" name="street_address" required>
+                        </div>
+                        <div class="billing-form__field">
+                            <label class="billing-form__label" for="postcode">Postcode / ZIP *</label>
+                            <input class="billing-form__input" type="text" id="postcode" name="postcode" required>
+                        </div>
+                        <div class="billing-form__field">
+                            <label class="billing-form__label" for="city">Town / City *</label>
+                            <input class="billing-form__input" type="text" id="city" name="city" required>
+                        </div>
+                        <div class="billing-form__field">
+                            <label class="billing-form__label" for="phone">Phone *</label>
+                            <input class="billing-form__input" type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="billing-form__field">
+                            <label class="billing-form__label" for="email">Email *</label>
+                            <input class="billing-form__input" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="billing-form__field">
+                            <label class="billing-form__label" for="order-notes">Order Notes</label>
+                            <textarea class="billing-form__textarea" id="order-notes" name="order_notes"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="checkout__order-summary">
+                    <h2 class="checkout__title">Your Order</h2>
+                    <div class="order-summary">
+                        <div class="order-summary__name">
+                            <span class="order-summary__label">PRODUCT</span>
+                            <span class="order-summary__value">TOTAL</span>
+                        </div>
+                        <ul class="order-summary__list">
+                            <li class="order-summary__item">
+                                <span class="order-summary__product">Lira Earrings</span>
+                                <span class="order-summary__price">$64</span>
+                            </li>
+                            <li class="order-summary__item">
+                                <span class="order-summary__product">Ollie Earrings</span>
+                                <span class="order-summary__price">$10</span>
+                            </li>
+                            <li class="order-summary__item">
+                                <span class="order-summary__product">Kaede Hair Pin</span>
+                                <span class="order-summary__price">$10</span>
+                            </li>
+                        </ul>
+                        <div class="order-summary__totals">
+                            <div class="order-summary__subtotal">
+                                <span class="order-summary__label">SUBTOTAL</span>
+                                <span class="order-summary__value">$85</span>
+                            </div>
+                            <div class="order-summary__shipping">
+                                <span class="order-summary__label">SHIPPING</span>
+                                <span class="order-summary__value">Free shipping</span>
+                            </div>
+                            <div class="order-summary__total">
+                                <span class="order-summary__label">TOTAL</span>
+                                <span class="order-summary__value">$85</span>
+                            </div>
+                        </div>
+                        <div class="order-summary__payment-methods">
+                            <label class="order-summary__payment-option">
+                                <input type="radio" name="payment_method" value="card" checked> Debit or credit card
+                            </label>
+                            <div class="payment-card-info">
+                                <input class="payment-card-info__input" type="text" placeholder="Card number">
+                                <div>
+                                    <input class="payment-card-info__input" type="text" placeholder="Expires">
+                                    <input class="payment-card-info__input" type="text" placeholder="Security code">
+                                </div>
+                            </div>
+                            <label class="order-summary__payment-option">
+                                <input type="radio" name="payment_method" value="paypal"> PayPal
+                            </label>
+                        </div>
+                        <a href="Order_Confirmation.html" class="order-summary__button">PLACE ORDER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__line"></div>
+            <div class="footer__inner">
+                <div class="footer__socials">
+                    <a href="" class="icon">
+                        <img src="images/socials-1.svg" alt="" class="icon__link">
+                    </a>
+                    <a href="" class="icon">
+                        <img src="images/socials-2.svg" alt="" class="icon__link">
+                    </a>
+                    <a href="" class="icon">
+                        <img src="images/socials-3.svg" alt="" class="icon__link">
+                    </a>
+                    <a href="" class="icon">
+                        <img src="images/socials-4.svg" alt="" class="icon__link">
+                    </a>
+                </div>
+                <div class="footer__email">
+                    <a href="contact.html" class="footer__email-link">Give an email, get the newsletter.</a>
+                    <a href="contact.html" class="icon">
+                        <img src="images/arrow.svg" alt="" class="icon__link">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* Shopp page */
+
+.shopp__inner {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.shopp__controls {
+    margin-right: 36px;
+}
+
+.search-input {
+    display: block;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #EFEFEF;
+    border-left: transparent;
+    border-top: transparent;
+    border-right: transparent;
+
+    width: 261px;
+    height: 35px;
+    padding: 10px;
+}
+
+.shopp__controls-search {
+    display: flex;
+    align-items: center;
+    max-width: 300px;
+}
+
+.search-input:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #bdbdbd;
+    outline: 0;
+}
+
+.search-icon {
+    position: relative;
+}
+
+.search-icon {
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 0.875rem;
+    width: 1rem;
+    cursor: pointer;
+    color: #bdbdbd;
+    transition: color 0.15s ease-in-out;
+}
+
+.search-icon:hover {
+    color: #212529;
+}
+
+.shopp__controls-sort {
+    margin-top: 44px;
+}
+
+.sort-select {
+    width: 261px;
+    height: 53px;
+    padding-left: 17px;
+    border: 1px solid #EFEFEF;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* .shop__sort, .shop__filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shop__sort-select, .shop__filter-range {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+} */
